@@ -4,13 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usando Funções ON</title>
+    <style>
+
+        #principal{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        #bloco{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+
+        #bloco1{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+
+        p{
+            width: 100px;
+        }
+
+    </style>
 </head>
 <body>
 
     <h1>Usando Funções ON</h1>
+    <div id="principal">
+        <div id="bloco"></div>
+        <p id="texto"></p>
+        <div id="bloco1"></div>
+        <p id="texto1"></p>
+    </div>
 
 
-    <!-- Aqui estamos fazendo a chamada do jQuery. -->
     <script
     src="https://code.jquery.com/jquery-3.7.1.js"
     integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -18,8 +48,18 @@
 
     <script>
 
-        /* Aqui estamos usando o jQuery para fazer uma manipulação DOM das cores de parágrafos. */
-        $("p").css("color", "#f00")
+        /* Aqui estamos usando eventos em funções utilizando o ON. */
+        $("#bloco1").on({
+            click:()=>{
+                $("#texto1").text('Cliquei no quadrado...')
+            },
+            mouseenter:()=>{
+                $("#texto1").text('Entrei no quadrado...')
+            },
+            mouseout:()=>{
+                $("#texto1").text('Sai do quadrado...')
+            }
+        })
 
     </script>
 </body>
