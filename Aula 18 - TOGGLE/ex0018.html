@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIDE e SHOW</title>
+    <title>TOGGLE</title>
     <style>
 
         .caixa{
@@ -25,8 +25,8 @@
 
         button{
 
-            margin-left: 25px;
-            width: 100px;
+            margin-left: 42px;
+            width: 200px;
             border-radius: 5px;
             border: 1px solid rgba(0, 0, 0, 0.384);
             background-color: lightcyan;
@@ -40,7 +40,7 @@
 </head>
 <body>
 
-    <h1>HIDE e SHOW</h1>
+    <h1>TOGGLE</h1>
 
     <div class="caixa">
 
@@ -49,8 +49,7 @@
 
     </div>
 
-    <button id="btn_mostrar">Mostrar</button>
-    <button id="btn_ocultar">Ocultar</button>
+    <button id="btn_mostrar_ocultar">Ocultar</button>
 
 
     <script
@@ -60,15 +59,14 @@
 
     <script>
 
-        $("#btn_mostrar").on({
+        $("#btn_mostrar_ocultar").on({
             click:function() {
-                $(".caixa").show('')
-            }
-        })
-
-        $("#btn_ocultar").on({
-            click: function(){
-                $(".caixa").hide()
+                $(".caixa").toggle()
+                if($(".caixa").is(':visible')){
+                    $("#btn_mostrar_ocultar").text('Ocultar')
+                } else {
+                    $("#btn_mostrar_ocultar").text('Mostrar')
+                }
             }
         })
 
