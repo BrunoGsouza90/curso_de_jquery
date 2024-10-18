@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANIMATE e TOGGLE</title>
+    <title>DELAY</title>
     <style>
 
         .caixa{
@@ -32,7 +32,7 @@
 </head>
 <body>
 
-    <h1>ANIMATE e TOGGLE</h1>
+    <h1>DELAY</h1>
 
     <div id="caixa" class="caixa">
 
@@ -41,7 +41,8 @@
 
     </div>
 
-    <button id="btn_tamanho">Aumentar / Diminuir</button>
+    <button id="btn_aumentar">Aumentar</button>
+    <button id="btn_diminuir">Diminuir</button>
     <button id="btn_visibilidade">Mostrar / Ocultar</button>
 
     <script
@@ -51,18 +52,26 @@
 
     <script>
 
-        $("#btn_tamanho").on({
+        $("#btn_aumentar").on({
             click:()=>{
-                $("#caixa").animate({width: 'toggle', height: 'toggle'}, {duration: 1500, complete:()=>{
-                    window.alert('Efeito efetuado com sucesso.')
+                $("#caixa").delay(2000).animate({width: '500px'}, {duration: 1500, complete:()=>{
+                    window.alert('Processo concluído com sucesso!')
                 }})
             }
         })
-
+        
+        $("#btn_diminuir").on({
+            click:()=>{
+                $("#caixa").delay().animate({width: '200px'}, {duration: 1500, complete:()=>{
+                    window.alert('Processo concluído com sucesso!')
+                }})
+            }
+        })
+        
         $("#btn_visibilidade").on({
             click:()=>{
-                $("#caixa").animate({opacity: 'toggle'}, {duration: 1500, complete:()=>{
-                    window.alert('Efeito efetuado com sucesso!')
+                $("#caixa").delay(2000).animate({opacity: 'toggle'}, {duration: 1500, complete:()=>{
+                    window.alert('Processo concluído com sucesso!')
                 }})
             }
         })
