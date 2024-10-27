@@ -24,15 +24,15 @@
 
     <script>
 
-        // $("p").siblings('#texto').css({'border': '1px solid red', 'padding': '20px', 'margin': '10px', 'max-width': '200px', 'text-align': 'center', 'border-radius': '10px'})
+        // $("p").siblings().css({'border': '1px solid red', 'padding': '20px', 'margin': '10px', 'max-width': '200px', 'text-align': 'center', 'border-radius': '10px'})
 
         // $("p").next().css({'border': '1px solid red', 'padding': '20px', 'margin': '10px', 'max-width': '200px', 'text-align': 'center', 'border-radius': '10px'})
 
-        // $("h2").prev().css({'border': '1px solid red', 'padding': '20px', 'margin': '10px', 'max-width': '200px', 'text-align': 'center', 'border-radius': '10px'})
+        // $("p").prev().css({'border': '1px solid red', 'padding': '20px', 'margin': '10px', 'max-width': '200px', 'text-align': 'center', 'border-radius': '10px'})
 
         // $("h3").nextAll().css({'border': '1px solid red', 'padding': '20px', 'margin': '10px', 'max-width': '200px', 'text-align': 'center', 'border-radius': '10px'})
 
-        $("#texto1").prevUntil('h3').css({'border': '1px solid red', 'padding': '20px', 'margin': '10px', 'max-width': '200px', 'text-align': 'center', 'border-radius': '10px'})
+        $("p#texto1").prevUntil('h3').css({'border': '1px solid red', 'padding': '20px', 'margin': '10px', 'max-width': '200px', 'text-align': 'center', 'border-radius': '10px'})
 
     </script>
 </body>
