@@ -7,14 +7,14 @@
 
     <style>
 
-        *{
+        * {
 
             margin: 0;
             padding: 0;
 
         }
 
-        .menu{
+        .menu {
 
             display: flex;
             width: 100vw;
@@ -22,7 +22,7 @@
 
         }
 
-        #menus{
+        #menus {
 
             background-color: #888;
             display: flex;
@@ -30,7 +30,7 @@
 
         }
 
-        .btnMenu{
+        .btnMenu {
 
             margin: 5px;
             padding: 5px;
@@ -39,7 +39,7 @@
 
         }
 
-        #controle{
+        #controle {
 
             display: inline-flex;
             align-items: center;
@@ -51,7 +51,7 @@
 
         }
 
-        button{
+        button {
 
             margin: 5px;
             cursor: pointer;
@@ -72,9 +72,13 @@
         <div id="menus">
 
             <button class="btnMenu">home</button>
+
             <button class="btnMenu">cursos</button>
+
             <button class="btnMenu">material</button>
+
             <button class="btnMenu">contatos</button>
+
             <button class="btnMenu">sobre</button>
 
         </div>
@@ -82,6 +86,7 @@
         <div id="controle">
 
             <button id="btnmenu">▲</button>
+
             <p id="msg"></p>
 
         </div>
@@ -96,16 +101,27 @@
     <script>
 
         let mostrar_ocultar = 'ocultar'
+        
         $('#btnmenu').on({
-            click: ()=>{
-                $('#menus').slideToggle({duration: 300, complete:()=>{
-                    if($('#btnmenu').html() == '▲'){
+
+            click: () => {
+
+                $('#menus').slideToggle({duration: 300, complete:() => {
+
+                    if($('#btnmenu').html() == '▲') {
+
                         $('#btnmenu').html('▼')
+
                     } else {
+
                         $('#btnmenu').html('▲')
+
                     }
+
                 }})
+
             }
+
         })
 
     </script>

@@ -6,46 +6,62 @@
     <title>Target</title>
     <style>
 
-        button{
+        button {
+
             margin: 10px;
             padding: 10px;
             cursor: pointer;
+
         }
 
-        div#texto2{
+        div#texto2 {
+
             padding: 10px;
             border: 1px solid black;
             border-radius: 5px;
             max-width: 110px;
             text-align: center;
             cursor: pointer;
+
         }
 
-        div#principal{
+        div#principal {
+
             padding: 0px 10px 0px 10px; 
             border: 1px solid black; 
             width: 110px; 
             border-radius: 5px;
             text-align: center;
             cursor: pointer;
+
         }
 
     </style>
+
 </head>
 <body>
 
     <h1>Target</h1>
-    <button id="texto1">CFB Cursos</button>
-    <br>
-    <div id="texto2">Clique aqui!</div>
-    <br>
-    <p id="resultado1"></p>
-    <p id="resultado2"></p>
-    <div id="principal">
-        <p>Texto</p>
-    </div>
-    <p id="resultado3"></p>
 
+    <button id="texto1">CFB Cursos</button>
+
+    <br>
+
+    <div id="texto2">Clique aqui!</div>
+
+    <br>
+
+    <p id="resultado1"></p>
+
+    <p id="resultado2"></p>
+
+    <div id="principal">
+
+        <p>Texto</p>
+
+    </div>
+
+    <p id="resultado3"></p>
 
     <script
     src="https://code.jquery.com/jquery-3.7.1.js"
@@ -54,7 +70,7 @@
 
     <script>
 
-        $("#texto1").click((event)=>{
+        $("#texto1").click((event) => {
             
             $("#resultado1").html(`X: ${event.pageX} px <br> Y: ${event.pageY} px`)
 
@@ -62,17 +78,20 @@
 
         })
 
-        $("#texto2").click(()=>{
+        $("#texto2").click(() => {
 
             $("#resultado1").html(``)
             $("#resultado2").html(`Objeto que foi cliclado: ${event.target.nodeName}.`)
 
         })
 
-        $(document).click((event)=>{
+        $(document).click((event) => {
+
             $("#resultado3").html(`${event.target.innerHTML}`)
+
         })
 
     </script>
+    
 </body>
 </html>

@@ -6,7 +6,7 @@
     <title>DELAY</title>
     <style>
 
-        .caixa{
+        .caixa {
 
             display: flex;
             flex-direction: column;
@@ -29,6 +29,7 @@
         }
 
     </style>
+
 </head>
 <body>
 
@@ -37,12 +38,15 @@
     <div id="caixa" class="caixa">
 
         <h3>CFB Cursos</h3>
+
         <p>Curso de jQuery</p>
 
     </div>
 
     <button id="btn_aumentar">Aumentar</button>
+
     <button id="btn_diminuir">Diminuir</button>
+
     <button id="btn_visibilidade">Mostrar / Ocultar</button>
 
     <script
@@ -53,29 +57,42 @@
     <script>
 
         $("#btn_aumentar").on({
-            click:()=>{
+
+            click:() => {
+
                 $("#caixa").delay(2000).animate({width: '500px'}, {duration: 1500, complete:()=>{
                     window.alert('Processo concluído com sucesso!')
                 }})
+
             }
+
         })
         
         $("#btn_diminuir").on({
-            click:()=>{
+
+            click:() => {
+
                 $("#caixa").delay().animate({width: '200px'}, {duration: 1500, complete:()=>{
                     window.alert('Processo concluído com sucesso!')
                 }})
+
             }
+
         })
         
         $("#btn_visibilidade").on({
-            click:()=>{
+
+            click:() => {
+
                 $("#caixa").delay(2000).animate({opacity: 'toggle'}, {duration: 1500, complete:()=>{
                     window.alert('Processo concluído com sucesso!')
                 }})
+
             }
+
         })
 
     </script>
+    
 </body>
 </html>

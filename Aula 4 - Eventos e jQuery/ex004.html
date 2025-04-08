@@ -6,7 +6,8 @@
     <title>Eventos e jQuery</title>
     <style>
 
-        #bloco{
+        #bloco {
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -16,10 +17,13 @@
             border: 0.5px solid rgba(0, 0, 0, 0.527);
             border-radius: 50%;
             margin: 0px 0px 0px 50px;
+
         }
 
-        #texto{
+        #texto {
+
             font: italic 1.3em cursive;
+
         }
 
     </style>
@@ -27,10 +31,12 @@
 <body>
 
     <h1>Eventos e jQuery</h1>
-    <div id="bloco">
-        <p id="texto">Intereja...</p>
-    </div>
 
+    <div id="bloco">
+
+        <p id="texto">Intereja...</p>
+
+    </div>
 
     <script
     src="https://code.jquery.com/jquery-3.7.1.js"
@@ -40,19 +46,25 @@
     <script>
 
         /* Aqui estamos trabalhando com eventos em funções. */
-        $("#bloco").click(()=>{
+        $("#bloco").click(() => {
+
             $("#texto").text('Clicou...')
             $("#bloco").css('background', 'green')
+
         })
 
-        $("#bloco").mouseenter(()=>{
+        $("#bloco").mouseenter(() => {
+
             $("texto").text('Entrou...')
             $("#bloco").css('background', 'red')
+
         })
         
-        $("#bloco").mouseout(()=>{
+        $("#bloco").mouseout(() => {
+
             $("#texto").text('Saiu...')
             $("#bloco").css('background', 'lightgray')
+            
         })
 
     </script>

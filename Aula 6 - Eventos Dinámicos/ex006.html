@@ -6,40 +6,51 @@
     <title>Eventos Dinámicos</title>
     <style>
 
-        #principal{
+        #principal {
+
             display: flex;
             justify-content: space-around;
+
         }
 
-        #bloco{
+        #bloco {
+
             width: 200px;
             height: 200px;
             border-radius: 10px;
             border: 1px solid rgba(0, 0, 0, 0.425);
             box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.397);
             background-color: black;
+
         }
 
-        #bloco2{
+        #bloco2 {
+
             width: 200px;
             height: 200px;
             border-radius: 10px;
             border: 1px solid rgba(255, 0, 0, 0.521);
             box-shadow: 3px 3px 8px rgba(255, 0, 0, 0.329);
             background-color: red;
+
         }
 
     </style>
+
 </head>
 <body>
 
     <h1>Eventos Dinámicos</h1>
-    <div id="principal">
-        <div id="bloco"></div>
-        <div id="bloco2"></div>
-    </div>
-    <p id="texto"></p>
 
+    <div id="principal">
+
+        <div id="bloco"></div>
+
+        <div id="bloco2"></div>
+
+    </div>
+
+    <p id="texto"></p>
 
     <script
     src="https://code.jquery.com/jquery-3.7.1.js"
@@ -50,21 +61,34 @@
 
         /* Aqui estamos usando eventos em funções utilizando o ON. */
         $("#bloco").on({
-            click:()=>{
+
+            click:() => {
+                
                 $("#texto").text('Cliquei no quadrado...')
+
             },
-            mouseenter:()=>{
+
+            mouseenter:() => {
+
                 $("#texto").text('Entrei no quadrado...')
+
             },
-            mouseout:()=>{
+
+            mouseout:() => {
+
                 $("#texto").text('Sai do quadrado...')
+
             }
+
         })
 
-        $("#bloco2").click(()=>{
+        $("#bloco2").click(() => {
+
             $("#bloco").trigger('click')
+
         })
 
     </script>
+
 </body>
 </html>

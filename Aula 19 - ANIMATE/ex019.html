@@ -6,7 +6,7 @@
     <title>ANIMATE</title>
     <style>
 
-        .caixa{
+        .caixa {
             
             display: flex;
             flex-direction: column;
@@ -30,16 +30,21 @@
 <body>
 
     <h1>ANIMATE</h1>
+
     <div id="caixa" class="caixa">
 
         <h3>CFB Cursos</h3>
+
         <p>Curso de jQuery</p>
 
     </div>
 
     <button id="btn_aumentar">Aumentar</button>
+
     <button id="btn_diminuir">Diminuir</button>
+
     <button id="btn_esquerda">Esquerda</button>
+
     <button id="btn_direta">Direita</button>
 
     <script
@@ -50,27 +55,43 @@
     <script>
 
         $("#btn_aumentar").on({
-            click:()=>{
-                $("#caixa").animate({width: '500px', height: '500px'}, {duration: 1000, complete:()=>{window.alert('Movimentação terminou!')}})
+
+            click:() => {
+
+                $("#caixa").animate({width: '500px', height: '500px'}, {duration: 1000, complete:() => {window.alert('Movimentação terminou!')}})
+
             }
+
         })
 
         $("#btn_diminuir").on({
-            click:()=>{
-                $("#caixa").animate({width: '200px'}, {duration: 1000}).animate({height: '200px'}, {duration: 1000, complete:()=>{window.alert('Movimentação terminou!')}})
+
+            click:() => {
+
+                $("#caixa").animate({width: '200px'}, {duration: 1000}).animate({height: '200px'}, {duration: 1000, complete:() => {window.alert('Movimentação terminou!')}})
+
             }
+
         })
 
         $("#btn_direta").on({
-            click:()=>{
-                $("#caixa").animate({left: '500px'}, {duration: 1000, complete:()=>{window.alert('Movimentação terminou!')}})
+
+            click:() => {
+
+                $("#caixa").animate({left: '500px'}, {duration: 1000, complete:() => {window.alert('Movimentação terminou!')}})
+
             }
+
         })
 
         $("#btn_esquerda").on({
-            click:()=>{
-                $("#caixa").animate({left: '50px'}, {duration: 1000, complete:()=>{window.alert('Movimentação terminou!')}})
+
+            click:() => {
+
+                $("#caixa").animate({left: '50px'}, {duration: 1000, complete:() => {window.alert('Movimentação terminou!')}})
+
             }
+
         })
 
     </script>

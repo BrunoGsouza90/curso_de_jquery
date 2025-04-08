@@ -6,7 +6,7 @@
     <title>Stop</title>
     <style>
 
-        .caixa{
+        .caixa {
 
             background-color: red;
             border-radius: 5px;
@@ -21,6 +21,7 @@
         }
 
     </style>
+
 </head>
 <body>
 
@@ -29,8 +30,11 @@
     <div>
 
         <button id="btnAnimar">Animar</button>
+
         <button id="btnProxima">Próxima</button>
+
         <button id="btnParar">Parar</button>
+
         <button id="btnFim">Fim</button>
 
     </div>
@@ -44,26 +48,37 @@
 
     <script>
 
-        $('#btnAnimar').click(()=>{
-            $('#caixa').animate({left:800}, {duration:2000})
+        $('#btnAnimar').click(() => {
+
+            $('#caixa').animate({left:600}, {duration:2000})
+
             $('#caixa').animate({top:400}, {duration:2000})
+
             $('#caixa').animate({left:0}, {duration:2000})
+
             $('#caixa').animate({top:120}, {duration:2000})
+
         })
 
-        $('#btnProxima').click(()=>{
+        $('#btnProxima').click(() => {
+
             $('#caixa').stop()
+
         })
 
-        $('#btnParar').click(()=>{
-            // Limpar fila | Pular para o fim
+        $('#btnParar').click(() => {
+
             $('#caixa').stop(true, false)
+
         })
 
-        $('#btnFim').click(()=>{
+        $('#btnFim').click(() => {
+
             $('#caixa').stop(false, true)
+
         })
 
     </script>
+
 </body>
 </html>

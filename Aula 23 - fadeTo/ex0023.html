@@ -6,19 +6,22 @@
     <title>fadeTo</title>
     <style>
 
-        h1{
+        h1 {
 
             margin: 20px 20px 10px 20px;
 
         }
 
-        *{
+        * {
+
             padding: 0px;
             margin: 0px;
             border: none;
+
         }
 
-        .menu{
+        .menu {
+
             background-color: #ddd;
             width: 100%;
             height: 100px;
@@ -28,9 +31,11 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.322);
+
         }
 
-        .itemMenu{
+        .itemMenu {
+
             display: flex;
             justify-content: center;
             align-items: center;
@@ -45,9 +50,11 @@
             padding: 20px;
             border: 1px solid black;
             box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.322);
+
         }
 
     </style>
+
 </head>
 <body>
     <h1>fadeTo</h1>
@@ -70,13 +77,19 @@
     <script>
 
         $('.itemMenu').on({
-            mouseenter:(function(){
+
+            mouseenter:(function() {
+
                 $(this).fadeTo(200, 0.3)
+
             }),
 
-            mouseout: (function(){
+            mouseout: (function() {
+
                 $(this).fadeTo(200, 1.0)
+
             })
+
         })
 
     </script>

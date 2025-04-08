@@ -6,37 +6,48 @@
     <title>Propagação</title>
     <style>
 
-        div#container{
+        div#container {
+
             border: 1px solid red;
             padding: 20px;
             border-radius: 5px;
+
         }
 
-        p{
+        p {
+
             border: 1px solid blue;
             padding: 10px;
             max-width: 80px;
             border-radius: 5px;
+
         }
 
-        span{
+        span {
+
             border: 1px solid green;
             padding: 10px;
             max-width: 80px;
             border-radius: 5px;
+
         }
 
     </style>
+
 </head>
 <body>
 
     <h1>Propagação</h1>
+
     <div id="container">
-        <p>CFB Cursos</p><br><br><br>
+
+        <p>CFB Cursos</p>
+        
+        <br><br><br>
+
         <span>Curso de jQuery</span>
+
     </div>
-
-
 
     <script
     src="https://code.jquery.com/jquery-3.7.1.js"
@@ -45,24 +56,25 @@
 
     <script>
 
-        $("div").click(()=>{
+        $("div").click(() => {
             
             window.alert('Evento disparado no "DIV"')
 
         })
 
-        $("p").click(()=>{
+        $("p").click(() => {
             
             window.alert('Evento disparo no "p"')
             
         })
 
-        $("span").click(()=>{
+        $("span").click(() => {
             
             window.alert('Evento disparo no "span"')
             
         })
 
     </script>
+    
 </body>
 </html>

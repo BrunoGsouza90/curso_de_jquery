@@ -6,7 +6,8 @@
     <title>Filtragem Parte 2</title>
     <style>
 
-        p{
+        p {
+
             background-color: lightyellow;
             max-width: 200px;
             border: 1px solid black;
@@ -14,9 +15,11 @@
             padding: 20px;
             margin: 10px;
             text-align: center;
+
         }
 
-        h3{
+        h3 {
+
             background-color: lightyellow;
             max-width: 200px;
             border: 1px solid black;
@@ -24,13 +27,17 @@
             padding: 20px;
             margin: 10px;
             text-align: center;
+
         }
 
-        .borda{
+        .borda {
+
             background-color: lightgreen;
+
         }
 
     </style>
+
 </head>
 <body>
 
@@ -59,10 +66,11 @@
 
     <script>
 
-        $("p, h3").filter('.borda').css({'color': 'red'})
+        $("p, h3").filter('.borda').css({'border': '3px solid red'})
 
-        $("p, h3").not('.borda').css({'color': 'blue'})
+        $("p, h3").not('.borda').css({'border': '3px solid blue'})
 
     </script>
+
 </body>
 </html>

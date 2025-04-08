@@ -6,26 +6,34 @@
     <title>Usando Funções ON</title>
     <style>
 
-        #principal{
+        #principal {
+
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+
         }
 
-        #bloco{
+        #bloco {
+
             width: 200px;
             height: 200px;
             background-color: black;
+
         }
 
-        #bloco1{
+        #bloco1 {
+
             width: 200px;
             height: 200px;
             background-color: black;
+
         }
 
-        p{
+        p {
+
             width: 100px;
+
         }
 
     </style>
@@ -33,11 +41,13 @@
 <body>
 
     <h1>Usando Funções ON</h1>
+
     <div id="principal">
+
         <div id="bloco"></div>
+
         <p id="texto"></p>
-        <div id="bloco1"></div>
-        <p id="texto1"></p>
+
     </div>
 
 
@@ -49,18 +59,29 @@
     <script>
 
         /* Aqui estamos usando eventos em funções utilizando o ON. */
-        $("#bloco1").on({
-            click:()=>{
-                $("#texto1").text('Cliquei no quadrado...')
+        $("#bloco").on({
+
+            click:() => {
+
+                $("#texto").text('Cliquei no quadrado...')
+
             },
-            mouseenter:()=>{
-                $("#texto1").text('Entrei no quadrado...')
+
+            mouseenter:() => {
+
+                $("#texto").text('Entrei no quadrado...')
+
             },
-            mouseout:()=>{
-                $("#texto1").text('Sai do quadrado...')
+
+            mouseout:() => {
+
+                $("#texto").text('Sai do quadrado...')
+
             }
+
         })
 
     </script>
+
 </body>
 </html>

@@ -6,24 +6,24 @@
     <title>HIDE e SHOW</title>
     <style>
 
-        .caixa{
+        .caixa {
 
-        background-color: lightgray;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 20px;
-        padding: 20px;
-        border: 1px solid rgba(0, 0, 0, 0.356);
-        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.322);
-        border-radius: 5px;
-        width: 200px;
-        height: 200px;
+            background-color: lightgray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.356);
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.322);
+            border-radius: 5px;
+            width: 200px;
+            height: 200px;
 
         }
 
-        button{
+        button {
 
             margin-left: 25px;
             width: 100px;
@@ -37,6 +37,7 @@
 
 
     </style>
+
 </head>
 <body>
 
@@ -45,11 +46,13 @@
     <div class="caixa">
 
         <h3>CFB Cursos</h3>
+
         <p>Curso de jQuery</p>
 
     </div>
 
     <button id="btn_mostrar">Mostrar</button>
+
     <button id="btn_ocultar">Ocultar</button>
 
 
@@ -61,17 +64,26 @@
     <script>
 
         $("#btn_mostrar").on({
+
             click:function() {
+
                 $(".caixa").show()
+
             }
+
         })
 
         $("#btn_ocultar").on({
-            click: function(){
+
+            click: function() {
+
                 $(".caixa").hide()
+
             }
+
         })
 
     </script>
+    
 </body>
 </html>

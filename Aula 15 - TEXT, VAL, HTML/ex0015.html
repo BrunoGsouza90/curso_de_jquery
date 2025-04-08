@@ -8,8 +8,11 @@
 <body>
 
     <h1>TEXT, VAL e HTML</h1>
+
     <h2 id="caixa">CFB Cursos</h2>
+
     <h2>Curso de jQuery</h2>
+
     <input type="text" id="nome">
 
     <script
@@ -19,22 +22,31 @@
 
     <script>
 
-        $("h2").click((event)=>{
+        $("h2").click((event) => {
+
             $("#nome").val(`${$(event.target).text()}`)
+
         })
 
-        $("h2").click(function(){
+        $("h2").click(function() {
+
             window.alert(`${$(this).text()}.`)
+
         })
 
-        $("input").click(function(){
+        $("input").click(function() {
+
             window.alert(`${$(this).val()}.`)
+
         })
 
-        $("h2").click(function(){
+        $("h2").click(function() {
+
             window.alert(`${$(this).html()}.`)
+
         })
 
     </script>
+    
 </body>
 </html>

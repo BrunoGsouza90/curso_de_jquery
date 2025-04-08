@@ -6,7 +6,8 @@
     <title>Object Event</title>
     <style>
 
-        div#container{
+        div#container {
+
             background-color: lightgreen;
             padding: 10px;
             border: 1px solid black;
@@ -14,10 +15,13 @@
             max-width: 200px;
             height: 70px;
             text-align: center;
+
         }
 
-        p{
+        p {
+
             font: italic 1em cursive;
+
         }
 
     </style>
@@ -25,8 +29,11 @@
 <body>
 
     <h1>Object Event</h1>
+
     <div id="container">
+
         <p id="texto"></p>
+
     </div>
 
     <script
@@ -36,8 +43,10 @@
 
     <script>
 
-        $(document).mousemove((event)=>{
+        $(document).mousemove((event) => {
+
             $("#texto").html(`Mouse X: ${event.pageX}px <br> Mouse Y: ${event.pageY}px`)
+            
         })
 
     </script>

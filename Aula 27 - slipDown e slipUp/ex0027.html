@@ -7,14 +7,14 @@
 
     <style>
 
-        *{
+        * {
 
             margin: 0;
             padding: 0;
 
         }
 
-        .menu{
+        .menu {
 
             display: flex;
             width: 100vw;
@@ -22,7 +22,7 @@
 
         }
 
-        #menus{
+        #menus {
 
             background-color: #888;
             display: flex;
@@ -30,7 +30,7 @@
 
         }
 
-        .btnMenu{
+        .btnMenu {
 
             margin: 5px;
             padding: 5px;
@@ -39,7 +39,7 @@
 
         }
 
-        #controle{
+        #controle {
 
             display: inline-flex;
             align-items: center;
@@ -51,7 +51,7 @@
 
         }
 
-        #controle button{
+        #controle button {
 
             margin: 5px;
 
@@ -61,6 +61,7 @@
 
 </head>
 <body>
+
     <h1>slipDown e slipUp</h1>
 
      <div id="menu" class="menu">
@@ -68,9 +69,13 @@
         <div id="menus">
 
             <button class="btnMenu">home</button>
+
             <button class="btnMenu">cursos</button>
+
             <button class="btnMenu">material</button>
+
             <button class="btnMenu">contatos</button>
+
             <button class="btnMenu">sobre</button>
 
         </div>
@@ -78,6 +83,7 @@
         <div id="controle">
 
             <button id="mostrar_ocultar">▲</button>
+
             <p id="msg"></p>
 
         </div>
@@ -92,20 +98,32 @@
     <script>
 
         let mostrar_ocultar = 'ocultar'
+        
         $('#mostrar_ocultar').on({
-            click: ()=>{
-                if(mostrar_ocultar == 'ocultar'){
-                    $('#menus').slideUp({duration: 500, complete:()=>{
+
+            click: () => {
+
+                if(mostrar_ocultar == 'ocultar') {
+
+                    $('#menus').slideUp({duration: 500, complete:() => {
+
                         mostrar_ocultar = 'mostrar'
                         $('#mostrar_ocultar').html('▼')
                     }})
-                } else if(mostrar_ocultar == 'mostrar'){
-                    $('#menus').slideDown({duration: 500, complete:()=>{
+
+                } else if(mostrar_ocultar == 'mostrar') {
+
+                    $('#menus').slideDown({duration: 500, complete:() => {
+
                         mostrar_ocultar = 'ocultar'
                         $('#mostrar_ocultar').html('▲')
+
                     }})
+
                 }
+
             }
+
         })
 
     </script>

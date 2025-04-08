@@ -6,7 +6,7 @@
     <title>ANIMATE e TOGGLE</title>
     <style>
 
-        .caixa{
+        .caixa {
 
             display: flex;
             flex-direction: column;
@@ -29,6 +29,7 @@
         }
 
     </style>
+
 </head>
 <body>
 
@@ -37,11 +38,13 @@
     <div id="caixa" class="caixa">
 
         <h3>CFB Cursos</h3>
+
         <p>Curso de jQuery</p>
 
     </div>
 
     <button id="btn_tamanho">Aumentar / Diminuir</button>
+
     <button id="btn_visibilidade">Mostrar / Ocultar</button>
 
     <script
@@ -52,21 +55,32 @@
     <script>
 
         $("#btn_tamanho").on({
-            click:()=>{
-                $("#caixa").animate({width: 'toggle', height: 'toggle'}, {duration: 1500, complete:()=>{
+
+            click:() => {
+
+                $("#caixa").animate({width: 'toggle', height: 'toggle'}, {duration: 1500, complete:() => {
+
                     window.alert('Efeito efetuado com sucesso.')
+
                 }})
+
             }
+
         })
 
         $("#btn_visibilidade").on({
-            click:()=>{
-                $("#caixa").animate({opacity: 'toggle'}, {duration: 1500, complete:()=>{
+
+            click:() => {
+
+                $("#caixa").animate({opacity: 'toggle'}, {duration: 1500, complete:() => {
                     window.alert('Efeito efetuado com sucesso!')
                 }})
+
             }
+
         })
 
     </script>
+    
 </body>
 </html>

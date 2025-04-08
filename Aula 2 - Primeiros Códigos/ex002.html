@@ -9,17 +9,21 @@
 <body>
 
     <h1>Primeiros Códigos</h1>
+
     <div id="calc">
 
         <label>Valor 1</label>
         <input type="text" id="v1" value="0">
+
         <br><br>
+
         <label>Valor 2</label>
         <input type="text" id="v2" value="0">
+
         <br><br>
-        <label>Resultado</label>
-        <input type="text" id="res" value="0">
-        <br><br>
+
+        <p>Resultado: <span id="res">0</span></p>
+
         <button id="btn_somarjs">Somar JS</button>
         <button id="btn_somarjq">Somar JQ</button>
 
@@ -38,30 +42,48 @@
 
         /* Aqui estamos usando o JavaScript puro. */
         window.document.querySelector('#btn_somarjs').addEventListener('click', ()=>{
-            if(resultado.value == 0){
+            
+            if(resultado.innerHTML == '0'){
+
                 valor1 = parseInt(valor1.value)
                 valor2 = parseInt(valor2.value)
+
                 let soma = valor1 + valor2
-                resultado.value = soma
+
+                resultado.innerHTML = soma
+
             } else {
-                let soma = parseInt(resultado.value) + valor1 + valor2
-                resultado.value = soma
+
+                let soma = parseInt(resultado.innerHTML) + valor1 + valor2
+
+                resultado.innerHTML = soma
+
             }
+
         })
 
         /* Aqui estamos usando o jQuery. */
-        $("#btn_somarjq").click(()=>{
-            if(resultado.value == 0){
+        $("#btn_somarjq").click(() => {
+
+            if(resultado.innerHTML == '0'){
+
                 let v1 = parseInt($("#v1").val())
                 let v2 = parseInt($("#v2").val())
+
                 let soma = v1 + v2
-                $("#res").val(soma)
+
+                $("#res").html(soma)
+
             } else {
+
                 let v1 = parseInt($("#v1").val())
                 let v2 = parseInt($("#v2").val())
-                let soma = parseInt($("#res").val()) + v1 + v2
-                $("#res").val(soma)
+                let soma = parseInt($("#res").html()) + v1 + v2
+
+                $("#res").html(soma)
+
             }
+
         })
 
     </script>

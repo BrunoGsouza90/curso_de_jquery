@@ -6,29 +6,29 @@
     <title>Atributos dos Elementos</title>
     <style>
 
-        #caixa{
+        #caixa {
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 20px;
-        padding: 20px;
-        border: 1px solid rgba(0, 0, 0, 0.356);
-        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.322);
-        border-radius: 5px;
-        width: 200px;
-        height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.356);
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.322);
+            border-radius: 5px;
+            width: 200px;
+            height: 200px;
 
         }
 
-        .cinza{
+        .cinza {
             
             background-color: lightgray;
 
         }
 
-        .vermelho{
+        .vermelho {
 
             display: flex;
             flex-direction: column;
@@ -45,7 +45,7 @@
 
         }
 
-        .azul{
+        .azul {
 
             display: flex;
             flex-direction: column;
@@ -62,7 +62,7 @@
 
         }
 
-        button{
+        button {
 
             margin-left: 25px;
             width: 100px;
@@ -76,6 +76,7 @@
 
 
     </style>
+
 </head>
 <body>
 
@@ -84,11 +85,13 @@
     <div id="caixa" class="cinza">
 
         <h3>CFB Cursos</h3>
+
         <p>Curso de jQuery</p>
 
     </div>
 
     <button id="btn_vermelho">Vermelho</button>
+
     <button id="btn_azul">Azul</button>
 
 
@@ -100,29 +103,48 @@
     <script>
 
         $("#caixa").on({
+
             click: function() {
-                if($(this).attr('class') == 'azul'){
+
+                if($(this).attr('class') == 'azul') {
+
                     $(this).attr('class', 'vermelho')
+
                 } else if($(this).attr('class') == 'vermelho') {
+
                     $(this).attr('class', 'azul')
+
                 } else if($(this).attr('class') == 'cinza') {
+
                     $(this).attr('class', 'vermelho')
+
                 }
+
             }
+
         })
 
         $("#btn_vermelho").on({
+
             click:function() {
+
                 $("#caixa").attr('class', 'vermelho')
+
             }
+
         })
 
         $("#btn_azul").on({
-            click: function(){
+
+            click: function() {
+
                 $("#caixa").attr('class', 'azul')
+
             }
+
         })
 
     </script>
+    
 </body>
 </html>

@@ -6,7 +6,7 @@
     <title>fadeIn e fadeOut</title>
     <style>
 
-        .caixa{
+        .caixa {
 
             display: flex;
             flex-direction: column;
@@ -29,6 +29,7 @@
         }
 
     </style>
+
 </head>
 <body>
 
@@ -37,12 +38,15 @@
     <div id="caixa" class="caixa">
 
         <h3>CFB Cursos</h3>
+
         <p>Curso de jQuery</p>
 
     </div>
 
     <button id="btn_mostrar">Mostrar</button>
+
     <button id="btn_ocultar">Ocultar</button>
+
     <button id="btn_visibilidade">Mostrar & Ocultar</button>
 
     <script
@@ -53,23 +57,35 @@
     <script>
 
         $("#btn_mostrar").on({
-            click:()=>{
+
+            click:() => {
+
                 $("#caixa").fadeIn()
+
             }
+
         })
         
         $("#btn_ocultar").on({
-            click:()=>{
+
+            click:() => {
+
                 $("#caixa").fadeOut()
+
             }
         })
 
         $("#btn_visibilidade").on({
-            click:()=>{
+
+            click:() => {
+
                 $("#caixa").fadeOut(1500).delay(1500).fadeIn(1500)
+
             }
+
         })
 
     </script>
+    
 </body>
 </html>

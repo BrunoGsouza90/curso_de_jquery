@@ -6,7 +6,7 @@
     <title>Finish</title>
     <style>
 
-        .caixa{
+        .caixa {
 
             margin: 20px;
             background-color: red;
@@ -20,14 +20,18 @@
         }
 
     </style>
+
 </head>
 <body>
+
     <h1>Finish</h1>
 
     <div>
 
         <button id="btnAumentar">Aumentar</button>
+
         <button id="btnDiminuir">Diminuir</button>
+
         <button id="btnFinalizar">Finalizar</button>
 
     </div>
@@ -42,21 +46,33 @@
     <script>
 
         $('#btnAumentar').on({
-            click:()=>{
-                $('#caixa').animate({width: '800px'}, 10000)
+
+            click:() => {
+
+                $('#caixa').animate({width: '400px'}, 10000)
+
             }
+
         })
 
         $('#btnDiminuir').on({
-            click:()=>{
+
+            click:() => {
+
                 $('#caixa').animate({width: '100px'}, 10000)
+
             }
+
         })
 
         $('#btnFinalizar').on({
-            click:()=>{
+
+            click:() => {
+
                 $('#caixa').finish()
+
             }
+
         })
 
     </script>
